@@ -1,0 +1,61 @@
+<table border="2">
+    <tr>
+        <td>Name:</td>
+        <td>Email:</td>
+        <td>Phone:</td>
+    </tr>
+    <tbody id="res"></tbody>
+</table>
+
+<script>
+    let data = [
+                {
+                    name : "jay",
+                    email : "jay@gmail.com",
+                    phone : "12345",
+                },
+                {
+                    name : "ajay",
+                    email : "ajay@gmail.com",
+                    phone : "12345",
+                },
+                {
+                    name : "vijay",
+                    email : "vijay@gmail.com",
+                    phone : "12345",
+                },
+                {
+                    name : "ashish",
+                    email : "ashish@gmail.com",
+                    phone : "12345",
+                },
+            ];
+
+        class printTable{
+            constructor(name,email,phone){
+                this.name = name;
+                this.email = email;
+                this.phone = phone;
+            }
+
+            tablePrint(){
+                let tbl= "";
+
+                data.map((val) =>{
+                    tbl +=
+            `
+                <tr>
+                    <td>${val.name}</td>
+                    <td>${val.email}</td>
+                    <td>${val.phone}</td>
+                </tr>
+            `
+                })
+
+                document.getElementById("res").innerHTML = tbl;
+            }
+        }
+
+        let result = new printTable;
+        result.tablePrint();
+</script>

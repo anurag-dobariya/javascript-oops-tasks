@@ -1,0 +1,57 @@
+<!-- wap to javascript class and object method use program to input marks of five subjects Physics, Chemistry, Biology,
+Mathematics and Computer. Calculate percentage and grade according to following
+
+
+Percentage >= 90% : Grade A
+Percentage >= 80% : Grade B
+Percentage >= 70% : Grade C
+Percentage >= 60% : Grade D
+Percentage >= 50% : Grade E
+Percentage >= 40% : Grade F -->
+<h1 id="res1"></h1>
+<h1 id="res2"></h1>
+<script>
+    
+    let phy = parseInt(prompt("Enter physics marks"));
+    let che = parseInt(prompt("Enter chemistry marks"));
+    let bio = parseInt(prompt("Enter biology marks"));
+    let maths = parseInt(prompt("Enter mathematics marks"));
+    let com = parseInt(prompt("Enter computer marks"));
+    let percentage1;
+    class result {
+        percentage(){
+
+             percentage1 = (phy + che + bio + maths + com) / 5 ;
+            document.getElementById("res1").innerHTML ="Percentage is = "+  percentage1;
+        }
+
+        grade(){
+            let resGrade;
+            
+            if(percentage1 >= 90){
+                document.getElementById("res2").innerHTML = "Grade A";
+            }
+            else if(percentage1 >= 80){
+                document.getElementById("res2").innerHTML = "Grade B";
+            }
+            else if(percentage1 >= 70){
+                 document.getElementById("res2").innerHTML = "Grade C";
+            }
+            else if(percentage1 >= 60){
+                 document.getElementById("res2").innerHTML = "Grade D";
+            }
+            else if(percentage1 >= 50){
+                 document.getElementById("res2").innerHTML = "Grade E";
+            }
+            else{
+        document.getElementById("res2").innerHTML = "Fail";
+            }
+        }
+
+
+    }
+
+    let percent = new result;
+    percent.percentage();
+    percent.grade();
+</script>

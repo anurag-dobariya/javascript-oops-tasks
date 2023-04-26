@@ -1,0 +1,19 @@
+<script>
+    let Digit = parseInt(prompt("Enter Digit"));
+
+class table{
+    MultiTable(){
+        let i = 1;
+        do{
+            let res = i * Digit;
+            // console.log(`${Digit} * ${i} = ${res}`);
+            document.write(`<h1>${Digit} * ${i} = ${res}</h1>`)
+            i++
+        }
+        while(i <= 10);
+    }
+}
+
+let digitTable = new table;
+digitTable.MultiTable();
+</script>
